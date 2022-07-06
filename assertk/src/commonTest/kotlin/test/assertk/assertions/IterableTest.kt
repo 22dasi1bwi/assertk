@@ -432,7 +432,7 @@ class IterableTest {
             | at index:0 expected:<("one", 2)>
             | at index:0 unexpected:<("one", 1)>
             | at index:1 expected:<("two", 1)>
-            | at index:1 unexpected:<("two", 2)> ([Thing(one=one, two=1, three=1), Thing(one=two, two=2, three=2)])""".trimMargin(),
+            | at index:1 unexpected:<("two", 2)> ([Thing(one=one, two=1, three=1, four=[]), Thing(one=two, two=2, three=2, four=[])])""".trimMargin(),
             error.message
         )
     }
@@ -454,7 +454,7 @@ class IterableTest {
             | at index:0 expected:<("one", 1, '2')>
             | at index:0 unexpected:<("one", 1, '1')>
             | at index:1 expected:<("two", 2, '3')>
-            | at index:1 unexpected:<("two", 2, '2')> ([Thing(one=one, two=1, three=1), Thing(one=two, two=2, three=2)])""".trimMargin(),
+            | at index:1 unexpected:<("two", 2, '2')> ([Thing(one=one, two=1, three=1, four=[]), Thing(one=two, two=2, three=2, four=[])])""".trimMargin(),
             error.message
         )
     }
